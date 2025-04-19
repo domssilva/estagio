@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="mb-4">Validação de Diplomas Brasileiros na Espanha</h1>
+    <p class="lead">Use as ferramentas abaixo para entender melhor o processo de validação, conferir as etapas e acessar informações úteis para se preparar.</p>
+</div>
+
+<div class="row text-center g-4 justify-content-center">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <i class="bi bi-list-check display-4 text-primary mb-3"></i>
+                <h5 class="card-title">Checklist de Preparação</h5>
+                <p class="card-text">Verifique rapidamente se você está com toda a documentação pronta para iniciar o processo.</p>
+                <a href="/checklist" class="btn btn-outline-primary">Acessar checklist</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <i class="bi bi-diagram-3 display-4 text-success mb-3"></i>
+                <h5 class="card-title">Etapas do Processo</h5>
+                <p class="card-text">Veja todas as fases obrigatórias para validar seu diploma no sistema educacional espanhol.</p>
+                <a href="/etapas" class="btn btn-outline-success">Ver etapas</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="text-center mt-5">
+    <a href="/faq" class="btn btn-dark">Ir para Perguntas Frequentes</a>
+</div>
+{% endblock %}
+

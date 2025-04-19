@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Checklist Interativo{% endblock %}
+
+{% block content %}
+    <h2 class="mb-4">Checklist Interativo de Documentação</h2>
+    <form method="post">
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" name="tem_diploma" id="tem_diploma">
+            <label class="form-check-label" for="tem_diploma">Tenho diploma emitido</label>
+        </div>
+
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" name="tem_apostila" id="tem_apostila">
+            <label class="form-check-label" for="tem_apostila">Já apostilei meus documentos</label>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" name="tem_traducao" id="tem_traducao">
+            <label class="form-check-label" for="tem_traducao">Tenho tradução juramentada</label>
+        </div>
+
+        <button type="submit" class="btn btn-success">Ver recomendação</button>
+    </form>
+
+    {% if resultado %}
+        <div class="alert alert-info mt-4">
+            <strong>Próxima ação recomendada:</strong> {{ resultado }}
+        </div>
+    {% endif %}
+{% endblock %}
